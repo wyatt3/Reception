@@ -26,7 +26,7 @@
                 <div class="photo-upload mx-3">
                     <p>Help us remeber our reception!<br>Snap a few pictures tonight. With us, friends, family, or whatever else you think is photo-worthy!<br>Upload them here so we can look back on all the fun memories of the night!</p>
                     <form method="POST" action="handle.php" enctype="multipart/form-data">
-                        <input class="form-control w-50 m-auto mb-3" type="file" multiple name="files[]">
+                        <input class="form-control w-50 m-auto mb-3" type="file" multiple required name="files[]">
                         <input type="submit" value="Upload" class="btn submit">
                     </form>
                 </div>
