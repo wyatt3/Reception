@@ -16,10 +16,11 @@ if($_FILES) {
         $newFilePath = "./img/upload/" . time() . '_' . random_int(0, 500) . '.' . $ext;
     
         //Upload the file into the temp dir
-        if(move_uploaded_file($tmpFilePath, $newFilePath)) {
-            header("location:/?page=thankYou");
+        if(!move_uploaded_file($tmpFilePath, $newFilePath)) {
+            echo "error";
         }
-      }
     }
+}
+header("location:/?page=thankYou");
 }
 ?>
