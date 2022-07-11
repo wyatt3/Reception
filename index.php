@@ -18,8 +18,8 @@
     <div class="container text-center d-flex flex-column justify-content-center vh-100">
         <h1 class="mb-3">Wyatt &amp; Gracie's<br>Wedding Reception</h1>
     <?php
-        if ($_SESSION['authenticated']) {
-            if ($_REQUEST['page'] == 'thankYou') {?>
+        if (isset($_SESSION['authenticated'])) {
+            if ($_REQUEST['page'] ?? 'null' == 'thankYou') {?>
                 <p>Thanks for sharing some memories with us! If you'd like to upload more pictures, just hit the button below.</p>
                 <a class="btn submit w-50 mx-auto" href="/">&larr; Go Back</a>
             <?php } else { ?>

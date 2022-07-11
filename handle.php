@@ -11,7 +11,8 @@ if($_FILES) {
       //Make sure we have a file path
       if ($tmpFilePath != ""){
         //Setup our new file path
-        $ext = end((explode(".", $_FILES["files"]["name"][$i])));
+        $ext = explode(".", $_FILES['files']['name'][$i]);
+        $ext = end($ext);
         $newFilePath = "./img/upload/" . time() . '_' . random_int(0, 500) . '.' . $ext;
 
         //Upload the file into the temp dir
